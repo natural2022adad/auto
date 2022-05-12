@@ -1,5 +1,5 @@
 #　日時関連の命令を使うときに宣言
-from datetime import datetime
+from datetime import datetime, timedelta
 
 t = datetime.now()
 fmt = t.strftime('%Y年%m月%d日　%H時%M分%S秒')
@@ -18,3 +18,10 @@ print(type(delta))
 sec = delta.seconds
 hours = sec / (60*60)
 print(f'あと{hours}時間です')
+
+# 練習
+
+base_t = datetime(2025, 2, 27)
+
+t = base_t + timedelta(days=3)
+print(t.strftime('%Y/%m/%d'))
